@@ -14,7 +14,7 @@ void add(stack_t **stack, unsigned int l_num)
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", l_num);
+		fprintf(stderr, "L%d: can't add, stack too short\n", l_num);
 		free_arg();
 		exit(EXIT_FAILURE);
 	}
