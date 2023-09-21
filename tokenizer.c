@@ -6,7 +6,7 @@
  * Return: no return value
  */
 
-void tokenizer()
+void tokenizer(void)
 {
 	int i = 0;
 	char *delims = " \t\n", *token = NULL;
@@ -36,4 +36,5 @@ void tokenizer()
 		i++;
 	}
 	args->tokens[i] = NULL;
+	free(cpy);
 }

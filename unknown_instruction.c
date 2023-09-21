@@ -6,7 +6,7 @@
  * Return: no return value
  */
 
-void unknown_instruction()
+void unknown_instruction(void)
 {
 	fprintf(stderr, "L%d: unknown instruction %s\n",
 			args->line_n, args->tokens[0]);

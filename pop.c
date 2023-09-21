@@ -15,12 +15,12 @@ void pop(stack_t **stack, unsigned int l_num)
 	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", l_num);
-		
+		free_arg();
 		exit(EXIT_FAILURE);
 	}
 	tmp = *stack;
-	if ((*stack)->next != NULL)
-		(*stack)->next->prev = NULL;
-	*stack = (*stack)->next;
+	*stack = tmp->next;
+	if (*stack != NULL)
+		(*stack)->prev = NULL;
 	free(tmp);
 }

@@ -6,21 +6,18 @@
  * Return: no return value
  */
 
-void line_handler()
+void line_handler(void)
 {
 	int i = 0;
 
 	args->tokenum = 0;
 	tokenizer();
 	run_command();
-	if (args->tokens != NULL)
+       	while (args->tokens[i])
 	{
-		while (args->tokens[i])
-		{
-			free(args->tokens[i]);
-			i++;
-		}
-		free(args->tokens);
-		args->tokens = NULL;
+		free(args->tokens[i]);
+		i++;
 	}
+	free(args->tokens);
+	args->tokens = NULL;
 }

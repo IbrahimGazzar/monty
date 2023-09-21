@@ -6,7 +6,7 @@
  * Return: no return value
  */
 
-void run_command()
+void run_command(void)
 {
 	int i = 0;
 	instruction_t instructs[] = {

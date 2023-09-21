@@ -19,7 +19,7 @@ void file_handler(char *filename)
 		free_arg();
 		exit(EXIT_FAILURE);
 	}
-	while(feof(args->fp) == 0)
+	while (feof(args->fp) == 0)
 	{
 		args->line_n += 1;
 		if (getline(&(args->line), &siz, args->fp) != -1)

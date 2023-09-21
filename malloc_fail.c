@@ -6,7 +6,7 @@
  * Return: no return value
  */
 
-void malloc_fail()
+void malloc_fail(void)
 {
 	fprintf(stderr, "Error: malloc failed\n");
 	free_arg();

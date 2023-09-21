@@ -6,7 +6,7 @@
  * Return: no return value
  */
 
-void free_arg()
+void free_arg(void)
 {
 	int i = 0;
 	stack_t *tmp;
@@ -29,14 +29,14 @@ void free_arg()
 			free(args->tokens[i]);
 			i++;
 		}
-		free(args->tokens);
-		args->tokens = NULL;
 	}
+	free(args->tokens);
+	args->tokens = NULL;
 	free(args);
-	if (stack != NULL)
+	while (stack != NULL)
 	{
 		tmp = stack;
-		stack = stack->next;
+		stack = tmp->next;
 		free(tmp);
 	}
 }
