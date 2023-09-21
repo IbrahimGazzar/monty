@@ -16,7 +16,7 @@ void run_command()
 		{"nop", &nop}, {NULL, NULL}
 	};
 
-	if (args->tokenum == 0)
+	if (args->tokenum == 0 || args->tokens[0] == NULL)
 		return;
 	args->instruct->opcode = NULL;
 	for (i = 0; instructs[i].opcode != NULL; i++)

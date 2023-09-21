@@ -16,12 +16,13 @@ void file_handler(char *filename)
 	if (args->fp == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", filename);
+		free_arg();
 		exit(EXIT_FAILURE);
 	}
 	while(feof(args->fp) == 0)
 	{
 		args->line_n += 1;
-		getline(&(args->line), &siz, args->fp);
-		line_handler();
+		if (getline(&(args->line), &siz, args->fp) != -1)
+			line_handler();
 	}
 }

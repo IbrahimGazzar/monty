@@ -28,5 +28,6 @@ int main(int argc, char **argv)
 	args->line_n = 0;
 	stack = NULL;
 	file_handler(argv[1]);
+	free_arg();
 	return (0);
 }

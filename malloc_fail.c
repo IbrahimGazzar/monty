@@ -9,6 +9,6 @@
 void malloc_fail()
 {
 	fprintf(stderr, "Error: malloc failed\n");
-	
+	free_arg();
 	exit(EXIT_FAILURE);
 }

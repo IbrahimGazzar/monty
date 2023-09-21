@@ -60,6 +60,7 @@ void tokenizer();
 void run_command();
 void unknown_instruction();
 void malloc_fail();
+void free_arg();
 void push(stack_t **stack, unsigned int l_num);
 void pall(stack_t **stack, unsigned int l_num);
 void pint(stack_t **stack, unsigned int l_num);

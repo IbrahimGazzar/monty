@@ -10,6 +10,6 @@ void unknown_instruction()
 {
 	fprintf(stderr, "L%d: unknown instruction %s\n",
 			args->line_n, args->tokens[0]);
-	
+	free_arg();
 	exit(EXIT_FAILURE);
 }

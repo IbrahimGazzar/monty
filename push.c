@@ -16,7 +16,7 @@ void push(stack_t **stack, unsigned int l_num)
 	    || (atoi(args->tokens[1]) == 0 && strcmp(args->tokens[1], "0") != 0))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", l_num);
-		
+		free_arg();
 		exit(EXIT_FAILURE);
 	}
 	node = malloc(sizeof(stack_t));
