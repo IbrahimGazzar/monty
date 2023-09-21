@@ -10,6 +10,14 @@
 
 void add(stack_t **stack, unsigned int l_num)
 {
-	(void) stack;
-	(void) l_num;
+	stack_t *tmp = *stack;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", l_num);
+		
+		exit(EXIT_FAILURE);
+	}
+	tmp->next->n += tmp->n;
+	pop(&tmp, l_num);
 }
