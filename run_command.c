@@ -13,7 +13,9 @@ void run_command(void)
 		{"push", &push}, {"pall", &pall},
 		{"pint", &pint}, {"pop", &pop},
 		{"swap", &swap}, {"add", &add},
-		{"nop", &nop}, {NULL, NULL}
+		{"nop", &nop}, {"sub", &sub},
+		{"div", &divide}, {"mul", &mul},
+		{"mod", &mod}, {NULL, NULL}
 	};
 
 	if (args->tokenum == 0 || args->tokens[0] == NULL)

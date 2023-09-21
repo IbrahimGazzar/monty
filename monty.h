@@ -68,6 +68,10 @@ void pop(stack_t **stack, unsigned int l_num);
 void swap(stack_t **stack, unsigned int l_num);
 void add(stack_t **stack, unsigned int l_num);
 void nop(stack_t **stack, unsigned int l_num);
+void sub(stack_t **stack, unsigned int l_num);
+void divide(stack_t **stack, unsigned int l_num);
+void mul(stack_t **stack, unsigned int l_num);
+void mod(stack_t **stack, unsigned int l_num);
 
 extern args_t *args;
 extern stack_t *stack;
